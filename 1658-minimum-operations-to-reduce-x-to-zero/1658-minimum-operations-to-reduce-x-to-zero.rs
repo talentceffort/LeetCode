@@ -13,8 +13,6 @@ impl Solution {
         
         let (mut max_len, mut cur_sum, mut left) = (0, 0, 0);
 
-        println!("target: {}", target);
-        
         for right in 0..n as usize {
             cur_sum += nums[right];
 
@@ -23,9 +21,7 @@ impl Solution {
             // cur_sum이 target보다 크다면 찾는 배열이 많은 요소를 포함하고 있음.
             // 왼쪽 끝의 요소를 제거하고 left를 증가시킴.
             while left <= right as i32 && cur_sum > target {
-                println!("cur_sum: {}", cur_sum);
-                println!("left: {}", left);
-                println!("right: {}", right);
+              
                 // 0, 3 -> [1, 1, 4, 2] -> 8
                 // 1, 3 -> [1, 4, 2] -> 7
                 // 2, 3 -> [4, 2] -> 9
