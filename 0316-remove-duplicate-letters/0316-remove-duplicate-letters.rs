@@ -13,8 +13,6 @@ impl Solution {
 
     for i in 0 .. s.len() {
       let c = s[i] as usize - 97;
-      println!("c: {}", c);
-      println!("utf-8: {}", String::from_utf8(vec![c as u8 + 97]).unwrap());
       if stack.contains(&c) {
         continue;
       }
