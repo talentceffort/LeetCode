@@ -16,7 +16,7 @@ impl Solution {
         queue.push_back(root);
 
         while !queue.is_empty() {
-            let node = queue.pop_back().unwrap() as usize;
+            let node = queue.pop_front().unwrap() as usize;
             let children = vec![left_child[node], right_child[node]];
 
             for child in children {
