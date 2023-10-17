@@ -21,12 +21,11 @@ impl Solution {
 
             for child in children {
                 if child != -1 {
-                    let value = child;
-                    if seen.contains(&value) {
+                    if seen.contains(&child) {
                         return false;
                     }
-                    queue.push_back(value);
-                    seen.insert(value);
+                    queue.push_back(child);
+                    seen.insert(child);
                 }
             }
         }
